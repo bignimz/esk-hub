@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mini Blog</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Muli:300,400,700|Playfair+Display:400,700,900"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='fonts/icomoon/style.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/bootstrap.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/magnific-popup.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/jquery-ui.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/owl.carousel.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/owl.theme.default.min.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/bootstrap-datepicker.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='fonts/flaticon/font/flaticon.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/aos.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body>
+    <div class="site-wrap">
+      <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+      <!-- Header -->
+      {% include "header.html" %}
+
+      <!-- Block Body -->
+      {% block body %}{% endblock %}
+
+      <!-- Subscribe -->
+      {% include "subscribe.html" %}
+
+      <!-- Footer -->
+      {% include 'footer.html' %}
+    </div>
+
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery-migrate-3.0.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/owl.carousel.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.stellar.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.countdown.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/aos.js')}}"></script>
+
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+  </body>
+</html>

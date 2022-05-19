@@ -1,5 +1,5 @@
 from datetime import datetime
-from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
+# from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from app import db, login_manager
 from flask_login import UserMixin
 
@@ -16,7 +16,7 @@ class User(db.Model, UserMixin):
       email = db.Column(db.String(120), unique=True, nullable=False)
       image_file = db.Column(db.String(255), nullable=False, default='default.jpg')
       password = db.Column(db.String(60), nullable=False)
-      postes = db.relationship('post', backref='author', lazy=True)
+      posts = db.relationship('Post', backref='author', lazy=True)
       comments = db.relationship('Comment', backref='author', lazy=True)
 
       def get_reset_token(self, expires_sec=1800):
@@ -71,3 +71,12 @@ class Comment(db.Model):
       
       def __repr__(self):
             return f"Comment('{self.comment}', '{self.posted_date}')"
+
+
+class Quotes:
+      def __init__(self,author,quote):
+            '''
+            Method to instanciate the quotes class
+            '''
+      self.author = author
+      self.quote = quote

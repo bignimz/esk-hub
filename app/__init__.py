@@ -24,11 +24,11 @@ def create_app(config_name):
       bcrypt.init_app(app)
 
 
-      from app.auth.views import users
+      from app.auth.views import auth
       from app.posts.views import posts
       from app.main.views import main
 
-      app.register_blueprint(users)
+      app.register_blueprint(auth)
       app.register_blueprint(posts)
       app.register_blueprint(main)
 

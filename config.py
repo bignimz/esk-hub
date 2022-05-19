@@ -20,7 +20,7 @@ class ProdConfig(Config):
     #         SQLALCHEMY_DATABASE_URI = SQLALCHEMY_DATABASE_URI.replace("postgres://", "postgresql://",1)
 
 class DevConfig(Config):
-      SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://nimrod:*admin*@localhost:5432/one_mic'
+      SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://esk:qwerty@localhost:5432/eskhub'
       DEBUG = True
 
 
