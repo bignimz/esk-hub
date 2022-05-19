@@ -259,4 +259,8 @@ jQuery(document).ready(function($) {
 	};
 	searchToggle();
 
+	$('.addPost').click(function(){
+		$('.display-form').toggle();
+	})
+
 });

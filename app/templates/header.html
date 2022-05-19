@@ -24,22 +24,36 @@
       <div class="col-8 text-right">
         <nav class="site-navigation" role="navigation">
           <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block mb-0">
-            <li><a href="category.html">Home</a></li>
-            <li><a href="category.html">Politics</a></li>
-            <li><a href="category.html">Tech</a></li>
-            <li><a href="category.html">Entertainment</a></li>
-            <li><a href="category.html">Travel</a></li>
-            <li><a href="category.html">Sports</a></li>
+            <li><a href="{{url_for('main.index')}}">Home</a></li>
+            <li><a href="">Politics</a></li>
+            <li><a href="">Tech</a></li>
+            <li><a href="">Entertainment</a></li>
+            <li><a href="">Travel</a></li>
+            <li><a href="">Sports</a></li>
             <li class="d-none d-lg-inline-block">
               <a href="#" class="js-search-toggle"
                 ><span class="icon-search"></span
               ></a>
             </li>
-            <div class="auth">
-              <a href="{{url_for('auth.login')}}">
-                <button class="btn auth-btn btn-primary">Login</button>
-              </a>
-            </div>
+            {% if current_user.is_authenticated %}
+            <a href="{{url_for('posts.addPost')}}">
+              <button class="btn auth-btn btn-primary">Create Post</button>
+            </a>
+            <a href="{{url_for('auth.account')}}">
+              <button class="btn auth-btn btn-primary">Account</button>
+            </a>
+            <a href="{{url_for('auth.logout')}}">
+              <button class="btn auth-btn btn-primary">Logout</button>
+            </a>
+
+            {% else %}
+            <a href="{{url_for('auth.login')}}">
+              <button class="btn auth-btn btn-primary">Login</button>
+            </a>
+            <a href="{{url_for('auth.register')}}">
+              <button class="btn auth-btn btn-primary">Sign Up</button>
+            </a>
+            {% endif %}
           </ul>
         </nav>
         <a

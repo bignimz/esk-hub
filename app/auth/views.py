@@ -20,7 +20,7 @@ def register():
             db.session.commit()
             flash(f'Account for {form.username.data} was successfully created! You can now login', category='success')
             return redirect(url_for('auth.login'))
-      return render_template('register.html', title='Register', form=form)
+      return render_template('signup.html', title='Register', form=form)
 
 
 @auth.route('/login', methods=['GET', 'POST'])
@@ -105,3 +105,6 @@ def reset_token(token):
             flash(f'Password for {form.username.data} was successfully updated! You can now login', category='success')
             return redirect(url_for('auth.login'))
       return render_template('reset_token.html', title='Reset Password', form=form)
+
+
+

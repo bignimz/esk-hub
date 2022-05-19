@@ -77,6 +77,10 @@ h1, h2, h3, h4, h5,
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
 
+.display-form {
+  display: none;
+}
+
 .line-height-1 {
   line-height: 1 !important; }
 

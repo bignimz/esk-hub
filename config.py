@@ -12,6 +12,8 @@ class Config:
       MAIL_USE_TLS = True
       MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
       MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
+      POPULAR_QUOTES = 'http://quotes.stormconsultancy.co.uk/popular.json'
+      RANDOM_QUOTES = 'http://quotes.stormconsult.stormconsultancy.co.uk/random.json'
 
 
 class ProdConfig(Config):

@@ -74,9 +74,7 @@ class Comment(db.Model):
 
 
 class Quotes:
-      def __init__(self,author,quote):
-            '''
-            Method to instanciate the quotes class
-            '''
-      self.author = author
-      self.quote = quote
+      def __init__(self, author, quote):
+
+            self.author = author
+            self.quote = quote
