@@ -24,12 +24,12 @@ def create_app(config_name):
       bcrypt.init_app(app)
 
 
-      from app.users.views import users
-      from app.pitches.views import pitches
+      from app.auth.views import users
+      from app.posts.views import posts
       from app.main.views import main
 
       app.register_blueprint(users)
-      app.register_blueprint(pitches)
+      app.register_blueprint(posts)
       app.register_blueprint(main)
 
 
